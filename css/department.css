@@ -1,0 +1,137 @@
+/* main-banner */
+.main-banner {
+  height: 920px;
+  min-width: var(--container-width);
+  width: 100%;
+}
+
+.main-banner__info {
+  margin-top: 148px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--color-dept);
+  font-size: 24px;
+  line-height: normal;
+}
+
+.main-banner__left :first-child {
+  font-weight: 600;
+}
+
+.main-banner__left :last-child {
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.main-banner__info > :last-child {
+  font-size: 66px;
+  font-weight: 900;
+}
+
+.main-banner__img {
+  height: 460px;
+  background: #eef3f3;
+}
+
+/* introduce */
+.introduce {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.introduce__title {
+  color: var(--color-dept, #4a86ff);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.introduce__inner {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduce__img {
+  width: 360px;
+  height: 640px;
+  background: #d9d9d9;
+}
+
+.introduce__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 62px;
+  grid-row-gap: 107px;
+}
+
+/* introduce-item */
+.introduce-item__title {
+  color: var(--color-maintext);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.introduce-item__desc {
+  margin-top: 10px;
+  color: var(--color-subtext);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* projects */
+.projects {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects__title {
+  color: var(--color-dept);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* swiper */
+.swiper {
+  margin-top: 90px;
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 400px;
+  height: 600px;
+  background: #d9d9d9;
+}
+
+.swiper-pagination-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 95px;
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 11px !important;
+  background: var(--color-subtext);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-maintext);
+}
+
+.button-prev, .button-next {
+    margin: 0 8px;
+}

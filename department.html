@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선린인터넷고등학교 - 컨텐츠미디어과</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/department.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <style>
+        :root {
+            --color-dept: var(--color-dept-design);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header></header>
+
+    <section class="main-banner">
+        <div class="container main-banner__info">
+            <div class="main-banner__left">
+                <div>선린인터넷고등학교 학과소개 #4</div>
+                <div>콘텐츠 디자인과</div>
+            </div>
+            <div>CONTENTS DESIGN</div>
+        </div>
+        <div class="main-banner__img"></div>
+    </section>
+
+    <section class="container introduce">
+        <div class="introduce__title">콘텐츠 디자인과는?</div>
+
+        <section class="introduce__inner">
+            <div class="introduce__img"></div>
+            <div class="introduce__list">
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 전공과목들을 이수해요</div>
+                    <div class="introduce-item__desc">
+                        컴퓨터그래픽<br>
+                        디자인일반<br>
+                        시각디자인<br>
+                        프로그래밍<br>
+                        상업경제<br>
+                        미디어콘텐츠일반<br>
+                        영상제작<br>
+                        광고콘텐츠제작<br>
+                        방송콘텐츠제작<br>
+                        게임디자인
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 전공과목들을 이수해요</div>
+                    <div class="introduce-item__desc">
+                        컴퓨터그래픽<br>
+                        디자인일반<br>
+                        시각디자인<br>
+                        프로그래밍<br>
+                        상업경제<br>
+                        미디어콘텐츠일반<br>
+                        영상제작<br>
+                        광고콘텐츠제작<br>
+                        방송콘텐츠제작<br>
+                        게임디자인
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 전공과목들을 이수해요</div>
+                    <div class="introduce-item__desc">
+                        컴퓨터그래픽<br>
+                        디자인일반<br>
+                        시각디자인<br>
+                        프로그래밍<br>
+                        상업경제<br>
+                        미디어콘텐츠일반<br>
+                        영상제작<br>
+                        광고콘텐츠제작<br>
+                        방송콘텐츠제작<br>
+                        게임디자인
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 전공과목들을 이수해요</div>
+                    <div class="introduce-item__desc">
+                        컴퓨터그래픽<br>
+                        디자인일반<br>
+                        시각디자인<br>
+                        프로그래밍<br>
+                        상업경제<br>
+                        미디어콘텐츠일반<br>
+                        영상제작<br>
+                        광고콘텐츠제작<br>
+                        방송콘텐츠제작<br>
+                        게임디자인
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="container projects">
+        <div class="projects__title">콘텐츠 디자인과에선 무슨 일을 해왔나요?</div>
+
+        <!-- slider js -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-pagination-wrap">
+            <div class="button-prev">
+                <img src="img/left.svg" alt="">
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="button-next">
+                <img src="img/right.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            navigation: {
+                nextEl: '.button-next',
+                prevEl: '.button-prev',
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            slidesPerView: 3,
+            spaceBetween: 60,
+        });
+
+    </script>
+</body>
+
+</html>

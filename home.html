@@ -21,7 +21,7 @@
                 date: new Date("2023-02-16T06:10:00.000Z"),
                 place: "선린 인터넷 고등학교 체육관",
 
-                attendLink: "https://exmple.com",
+                attendLink: "https://example.com",
                 attendStart: new Date("2023-01-30T06:10:00.000Z"),
                 attendEnd: new Date("2023-02-09T07:00:00.000Z")
             },
@@ -30,7 +30,7 @@
                 date: new Date("2023-04-16T06:10:00.000Z"),
                 place: "선린 인터넷 고등학교 체육관",
 
-                attendLink: "https://exmple.com",
+                attendLink: "https://example.com",
                 attendStart: new Date("2023-03-30T06:10:00.000Z"),
                 attendEnd: new Date("2023-04-09T07:00:00.000Z")
             },
@@ -39,7 +39,7 @@
                 date: new Date("2023-08-16T06:10:00.000Z"),
                 place: "선린 인터넷 고등학교 체육관",
 
-                attendLink: "https://exmple.com",
+                attendLink: "https://example.com",
                 attendStart: new Date("2023-07-30T06:10:00.000Z"),
                 attendEnd: new Date("2023-08-09T07:00:00.000Z")
             },
@@ -48,8 +48,8 @@
                 date: new Date("2023-10-16T06:10:00.000Z"),
                 place: "선린 인터넷 고등학교 체육관",
 
-                attendLink: "https://exmple.com",
-                attendStart: new Date("2023-09-30T06:10:00.000Z"),
+                attendLink: "https://example.com",
+                attendStart: new Date("2023-01-30T06:10:00.000Z"),
                 attendEnd: new Date("2023-10-09T07:00:00.000Z")
             }
         ];
@@ -58,6 +58,7 @@
         const getDateStr = (date) => `${date.getMonth() + 1}월 ${date.getDate()}일(${weekday[date.getDay()]})`
         const getStatusMsg = (name, date) => `${name}는 ${getDateStr(date)} ${date.getHours()}에 진행됩니다.`
         const getNoticeMsg = (start, end) => `${getDateStr(start)} ~ ${getDateStr(end)} ${end.getHours()} 까지 아래 링크를 통해 참가 신청합니다.`
+        const checkBetween = (start, end, now) => start.getTime() <= now && now < end.getTime()
         function secToStr(seconds) {
             const days = Math.floor(seconds / (24 * 60 * 60));
             seconds -= days * 24 * 60 * 60;
@@ -92,7 +93,7 @@
                         if (passed) continue;
 
                         const waiting = schedule.attendStart.getTime() > now;
-                        const attending = schedule.attendStart.getTime() <= now && now < schedule.attendEnd.getTime()
+                        const attending = checkBetween(schedule.attendStart, schedule.attendEnd, now)
 
                         if (waiting) {
                             this.msg = schedule.name + " 신청일이 임박했어요!";
@@ -159,7 +160,10 @@
                         </div>
                     </div>
 
-                    <button class="button">신청 기간이 아닙니다</button>
+                    <button class="button"
+                        x-data="{ disabled: !checkBetween(sc.attendStart, sc.attendEnd, new Date()) }"
+                        x-bind:disabled="disabled" x-text="disabled ? '신청 기간이 아닙니다' : '참가 신청하기'"
+                        x-on:click="location.href = sc.attendLink"></button>
                 </div>
             </template>
         </div>

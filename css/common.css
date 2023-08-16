@@ -47,6 +47,7 @@ img {
   font-size: 22px;
   font-weight: 600;
   line-height: normal;
+  font-variant-numeric: tabular-nums;
 }
 
 .header {

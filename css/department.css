@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 60px;
+}
+
 /* main-banner */
 .main-banner {
   height: 920px;

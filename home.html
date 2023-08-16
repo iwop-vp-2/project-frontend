@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/home.css">
+
+    <script src="./js/common.js"></script>
 </head>
 
 <body>
@@ -20,9 +22,9 @@
                 <span class="header__dept-name">선린인터넷고등학교</span>
             </div>
             <nav class="header__nav">
-                <div class="header__link">입학 설명회 안내</div>
-                <div class="header__link">SW 영재교육원 안내</div>
-                <div class="header__link">학과 소개</div>
+                <a class="header__link" href="javascript:scrollToID('info-session-schedule')">입학 설명회 안내</a>
+                <a class="header__link" href="javascript:scrollToID('sw-edu-institute')">SW 영재교육원 안내</a>
+                <a class="header__link" href="javascript:scrollToID('department-introduce')">학과 소개</a>
             </nav>
         </div>
     </header>
@@ -43,7 +45,7 @@
         </div>
     </section>
 
-    <section class="container info-session-schedule">
+    <section id="info-session-schedule" class="container info-session-schedule">
         <div class="info-session-schedule__title">입학 설명회 안내</div>
 
         <div class="info-session-schedule__list">
@@ -121,7 +123,7 @@
         </div>
     </section>
 
-    <section class="container sw-edu-institute">
+    <section id="sw-edu-institute" class="container sw-edu-institute">
         <div class="sw-edu-institute__left">
             <div class="sw-edu-institute__title">SW 영재교육원 안내</div>
             <div class="sw-edu-institute__subtitle">SW 영재교육원에 대해선 꼼꼼히 설명해야해요.</div>
@@ -155,20 +157,20 @@
         </div>
     </section>
 
-    <section class="container department-introduce">
+    <section id="department-introduce" class="container department-introduce">
         <div class="department-introduce__title">학과 소개</div>
         <div class="department-introduce__list">
             <div class="department-introduce-item">
                 <div class="department-introduce-item__img"></div>
                 <div class="department-introduce-item__info">
                     <div class="department-introduce-item__name">
-                        정보보호과
+                        정보보호과1
                     </div>
                     <div class="department-introduce-item__desc">
                         학과 설명은 꼼꼼히 작성해야 해요 학과 설명은 꼼꼼히 작성해야 해요<br>
                         학과 설명은 꼼꼼히 작성해야 해요 학과 설명은 꼼꼼히 작성해야 해요.
                     </div>
-                    <button class="button">더 알아보기</button>
+                    <button class="button" onclick="location.href='/department.html'">더 알아보기</button>
                 </div>
             </div>
 
@@ -182,7 +184,7 @@
                         학과 설명은 꼼꼼히 작성해야 해요 학과 설명은 꼼꼼히 작성해야 해요<br>
                         학과 설명은 꼼꼼히 작성해야 해요 학과 설명은 꼼꼼히 작성해야 해요.
                     </div>
-                    <button class="button">더 알아보기</button>
+                    <button class="button" onclick="location.href='/department.html'">더 알아보기</button>
                 </div>
             </div>
 
@@ -196,7 +198,7 @@
                         학과 설명은 꼼꼼히 작성해야 해요 학과 설명은 꼼꼼히 작성해야 해요<br>
                         학과 설명은 꼼꼼히 작성해야 해요 학과 설명은 꼼꼼히 작성해야 해요.
                     </div>
-                    <button class="button">더 알아보기</button>
+                    <button class="button" onclick="location.href='/department.html'">더 알아보기</button>
                 </div>
             </div>
 
@@ -210,7 +212,7 @@
                         학과 설명은 꼼꼼히 작성해야 해요 학과 설명은 꼼꼼히 작성해야 해요<br>
                         학과 설명은 꼼꼼히 작성해야 해요 학과 설명은 꼼꼼히 작성해야 해요.
                     </div>
-                    <button class="button">더 알아보기</button>
+                    <button class="button" onclick="location.href='/department.html'">더 알아보기</button>
                 </div>
             </div>
         </div>

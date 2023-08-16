@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/department.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
 
     <style>
         :root {
@@ -31,11 +32,11 @@
             </div>
 
             <nav class="header__nav">
-                <div class="header__link">학과 소개</div>
-                <div class="header__link">산출물 전시</div>
+                <a class="header__link" href="javascript:scrollToID('introduce')">학과 소개</a>
+                <a class="header__link" href="javascript:scrollToID('projects')">산출물 전시</a>
             </nav>
 
-            <button class="button header__backBtn">돌아가기</button>
+            <button class="button header__backBtn" onclick="history.back()">돌아가기</button>
         </div>
     </header>
 
@@ -50,7 +51,7 @@
         <div class="main-banner__img"></div>
     </section>
 
-    <section class="container introduce">
+    <section id="introduce" class="container introduce">
         <div class="introduce__title">콘텐츠 디자인과는?</div>
 
         <section class="introduce__inner">
@@ -123,7 +124,7 @@
         </section>
     </section>
 
-    <section class="container projects">
+    <section id="projects" class="container projects">
         <div class="projects__title">콘텐츠 디자인과에선 무슨 일을 해왔나요?</div>
 
         <!-- slider js -->

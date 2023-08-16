@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 130px;
+}
+
 /* home-hero */
 .home-hero {
   min-width: var(--container-width);

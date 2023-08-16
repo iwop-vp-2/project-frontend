@@ -23,7 +23,21 @@
 </head>
 
 <body>
-    <header></header>
+    <header class="header">
+        <div class="container header__wrap">
+            <div class="header__dept">
+                <img class="header__logo" src="img/CD_icon.svg">
+                <span class="header__dept-name">콘텐츠 디자인과</span>
+            </div>
+
+            <nav class="header__nav">
+                <div class="header__link">학과 소개</div>
+                <div class="header__link">산출물 전시</div>
+            </nav>
+
+            <button class="button header__backBtn">돌아가기</button>
+        </div>
+    </header>
 
     <section class="main-banner">
         <div class="container main-banner__info">
@@ -137,7 +151,31 @@
         </div>
     </section>
 
-    <footer></footer>
+    <footer>
+        <div class="container footer__wrap">
+            <div class="footer__project-info">
+                <div class="project-info__title">IWOP 2조 방학 프로젝트</div>
+                <div class="project-info__people">
+                    <span class="project-info__role">개발</span>
+                    <span class="project-info__name">김도형 박서혁 지수민</span>
+
+                    <span class="project-info__role">디자인</span>
+                    <span class="project-info__name">윤휘영</span>
+                </div>
+            </div>
+
+            <div class="footer__links">
+                <a href="https://sunrint.sen.hs.kr">
+                    <img src="img/SCH_icon_white.svg" alt="">
+                    <span>선린인터넷고등학교</span>
+                </a>
+                <a href="#">
+                    <img src="img/home.svg" alt="">
+                    <span>공식 홈페이지</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         new Swiper('.swiper', {

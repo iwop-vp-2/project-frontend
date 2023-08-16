@@ -132,6 +132,7 @@
   background: var(--color-maintext);
 }
 
-.button-prev, .button-next {
-    margin: 0 8px;
+.button-prev,
+.button-next {
+  margin: 0 8px;
 }

@@ -20,20 +20,145 @@ img {
   display: block;
 }
 
-header {
+.banner {
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+
+  height: 54px;
+  width: 100%;
+  min-width: var(--container-width);
+
+  background: var(--color-button-stroke);
+}
+
+.banner__wrap {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner__txt {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.header {
   min-width: var(--container-width);
   width: 100%;
+
+  background: white;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
   height: 100px;
 }
 
+.header__dept {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__dept-name {
+  color: var(--color-dept);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header__nav {
+  margin-left: 75px;
+
+  display: flex;
+  align-items: center;
+  gap: 75px;
+}
+
+.header__link {
+  color: var(--color-maintext);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.header__backBtn {
+  margin-left: auto;
+  color: white !important;
+  background: var(--color-dept) !important;
+}
+
 footer {
-  margin-top: 800px;
-  
   min-width: var(--container-width);
   width: 100%;
+  height: 360px;
 
-  height: 460px;
+  margin-top: 400px;
+
   background: var(--color-maintext);
+}
+
+.footer__wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-info__title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.project-info__people {
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.project-info__role {
+  font-weight: 600;
+}
+
+.project-info__name {
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__links a {
+  display: flex;
+
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.footer__links a img {
+  display: block;
+  width: 27px;
+  height: 27px;
+
+  margin-right: 15px;
 }
 
 .container {

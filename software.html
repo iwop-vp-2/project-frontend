@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선린인터넷고등학교 - 컨텐츠미디어과</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/department.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+
+    <style>
+        :root {
+            --color-dept: var(--color-dept-software);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__wrap">
+            <div class="header__dept">
+                <span class="header__dept-name">소프트웨어과</span>
+            </div>
+
+            <nav class="header__nav">
+                <a class="header__link" href="javascript:scrollToID('introduce')">학과 소개</a>
+                <a class="header__link" href="javascript:scrollToID('projects')">산출물 전시</a>
+            </nav>
+
+            <button class="button header__backBtn" onclick="history.back()">돌아가기</button>
+        </div>
+    </header>
+
+    <section class="main-banner">
+        <div class="container main-banner__info">
+            <div class="main-banner__left">
+                <div>선린인터넷고등학교 학과소개 #2</div>
+                <div>소프트웨어과</div>
+            </div>
+            <div>SOFTWARE</div>
+        </div>
+        <img class="main-banner__img" src="img/placeholder-landscape.jpg" alt="">
+    </section>
+
+    <section id="introduce" class="container introduce">
+        <div class="introduce__title">소프트웨어과는?</div>
+
+        <section class="introduce__inner">
+            <img class="introduce__img" src="img/placeholder-portrait.jpg" alt="">
+            <div class="introduce__list">
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 전공과목들을 이수해요</div>
+                    <div class="introduce-item__desc">
+                        프로그래밍(C)<br>
+                        인공지능과 미래사회<br>
+                        인공지능 모델링<br>
+                        웹프로그래밍 실무<br>
+                        게임프로그래밍(Unity)<br>
+                        스마트문화콘텐츠제작(모바일 앱)<br>
+                        자료구조<br>
+                        정보과학<br>
+                        서버구축 및 운영<br>
+                        컴퓨터시스템일반<br>
+                        빅데이터 분석<br>
+                        응용프로그래밍 개발
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 소수전공 활동들을 가지고 있어요</div>
+                    <div class="introduce-item__desc">
+                        웹개발 프로젝트<br>
+                        모바일 앱 개발 프로젝트<br>
+                        C언어 프로그래밍<br>
+                        인공지능 중급<br>
+                        이산수학과 알고리즘<br>
+                        인공지능 프로젝트<br>
+                        게임 개발 프로젝트<br>
+                        게임 심화 프로젝트
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">주요 학과 행사/대회</div>
+                    <div class="introduce-item__desc">
+                        교내프로그래밍 경진대회<br>
+                        선린 해커톤 대회<br>
+                        디지털콘텐츠 개발대회
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 전공 동아리들을 운영하고 있어요</div>
+                    <div class="introduce-item__desc">
+                        게임개발반 1(RG)<br>
+                        게임개발반 2(zerOpen)<br>
+                        모바일앱창작반(App:le Pie)<br>
+                        웹 개발반(IWOP)<br>
+                        웹 서버 개발반(AnA)<br>
+                        모바일컨텐츠개발반(EDCAN)
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="projects" class="container projects">
+        <div class="projects__title">소프트웨어과에선 무슨 일을 해왔나요?</div>
+
+        <!-- slider js -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-pagination-wrap">
+            <div class="button-prev">
+                <img src="img/left.svg" alt="">
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="button-next">
+                <img src="img/right.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer__wrap">
+            <div class="footer__project-info">
+                <div class="project-info__title">IWOP 2조 방학 프로젝트</div>
+                <div class="project-info__people">
+                    <span class="project-info__role">개발</span>
+                    <span class="project-info__name">김도형 박서혁 지수민</span>
+
+                    <span class="project-info__role">디자인</span>
+                    <span class="project-info__name">윤휘영</span>
+                </div>
+            </div>
+
+            <div class="footer__links">
+                <a href="https://sunrint.sen.hs.kr">
+                    <img src="img/SCH_icon_white.svg" alt="">
+                    <span>선린인터넷고등학교</span>
+                </a>
+                <a href="https://sunrint.sen.hs.kr">
+                    <img src="img/home.svg" alt="">
+                    <span>공식 홈페이지</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            navigation: {
+                nextEl: '.button-next',
+                prevEl: '.button-prev',
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            slidesPerView: 3,
+            spaceBetween: 60,
+        });
+
+    </script>
+</body>
+
+</html>

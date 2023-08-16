@@ -143,11 +143,20 @@ html {
   width: 400px;
   height: 300px;
   background: #fafafa;
+  display: block;
+  object-fit: cover;
 }
 
 .sw-edu-institute-item__desc {
   height: 100px;
   background: #f3f3f3;
+  
+  color: var(--color-maintext);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+
+  padding: 20px;
 }
 
 /* department-introduce */
@@ -180,8 +189,11 @@ html {
 }
 
 .department-introduce-item__img {
+  width: 100%;
   height: 225px;
   background: #d9d9d9;
+  display: block;
+  object-fit: cover;
 }
 
 .department-introduce-item__info {

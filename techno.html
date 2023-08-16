@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선린인터넷고등학교 - 컨텐츠미디어과</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/department.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+
+    <style>
+        :root {
+            --color-dept: var(--color-dept-techno);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__wrap">
+            <div class="header__dept">
+                <span class="header__dept-name">IT 경영과</span>
+            </div>
+
+            <nav class="header__nav">
+                <a class="header__link" href="javascript:scrollToID('introduce')">학과 소개</a>
+                <a class="header__link" href="javascript:scrollToID('projects')">산출물 전시</a>
+            </nav>
+
+            <button class="button header__backBtn" onclick="history.back()">돌아가기</button>
+        </div>
+    </header>
+
+    <section class="main-banner">
+        <div class="container main-banner__info">
+            <div class="main-banner__left">
+                <div>선린인터넷고등학교 학과소개 #3</div>
+                <div>IT 경영과</div>
+            </div>
+            <div>IT MANAGEMENT</div>
+        </div>
+        <img class="main-banner__img" src="img/placeholder-landscape.jpg" alt="">
+    </section>
+
+    <section id="introduce" class="container introduce">
+        <div class="introduce__title">IT 경영과는?</div>
+
+        <section class="introduce__inner">
+            <img class="introduce__img" src="img/placeholder-portrait.jpg" alt="">
+            <div class="introduce__list">
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 전공과목들을 이수해요</div>
+                    <div class="introduce-item__desc">
+                        상업경제<br>
+                        회계원리<br>
+                        컴퓨터시스템일반<br>
+                        디자인일반<br>
+                        프로그래밍<br>
+                        사무관리<br>
+                        회계실무<br>
+                        전자상거래실무<br>
+                        자원통합관리<br>
+                        사무행정<br>
+                        기업과경영<br>
+                        스마트콘텐츠실무<br>
+                        빅데이터분석<br>
+                        성공적인 직업생활<br>
+                        비즈니스기획실무<br>
+                        창업일반<br>
+                        인공지능과 미래사회<br>
+                        마케팅과 광고 등
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 소수전공 활동들을 가지고 있어요</div>
+                    <div class="introduce-item__desc">
+                        창업실무<br>
+                        쇼핑몰구축<br>
+                        전산회계(기초,심화)<br>
+                        세무관리<br>
+                        IT프로젝트<br>
+                        모의주식투자<br>
+                        NS 마케팅<br>
+                        직탐(상업경제, 성공적인 직업생활) 대비
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">주요 학과 행사/대회</div>
+                    <div class="introduce-item__desc">
+                        창업아이템 공모전<br>
+                        창의아이디어 경진대회<br>
+                        기업연구보고서 공모전<br>
+                        전국 상업 경진대회<br>
+                        장영실 발명• 창업대전<br>
+                        특성화고교생사장되기 창업대회<br>
+                        쇼핑몰구축 경진대회<br>
+                        TED 경진대회<br>
+                        한경청소년경제체험대회<br>
+                        앙트프러너십 연구발표대회
+                    </div>
+                </div>
+
+                <div class="introduce-item">
+                    <div class="introduce-item__title">이런 전공 동아리들을 운영하고 있어요</div>
+                    <div class="introduce-item__desc">
+                        창업연구반(BFD)<br>
+                        펀드연구반(FRS)<br>
+                        IT융합연구반(HMH)
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="projects" class="container projects">
+        <div class="projects__title">IT 경영과에선 무슨 일을 해왔나요?</div>
+
+        <!-- slider js -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-pagination-wrap">
+            <div class="button-prev">
+                <img src="img/left.svg" alt="">
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="button-next">
+                <img src="img/right.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer__wrap">
+            <div class="footer__project-info">
+                <div class="project-info__title">IWOP 2조 방학 프로젝트</div>
+                <div class="project-info__people">
+                    <span class="project-info__role">개발</span>
+                    <span class="project-info__name">김도형 박서혁 지수민</span>
+
+                    <span class="project-info__role">디자인</span>
+                    <span class="project-info__name">윤휘영</span>
+                </div>
+            </div>
+
+            <div class="footer__links">
+                <a href="https://sunrint.sen.hs.kr">
+                    <img src="img/SCH_icon_white.svg" alt="">
+                    <span>선린인터넷고등학교</span>
+                </a>
+                <a href="https://sunrint.sen.hs.kr">
+                    <img src="img/home.svg" alt="">
+                    <span>공식 홈페이지</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            navigation: {
+                nextEl: '.button-next',
+                prevEl: '.button-prev',
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            slidesPerView: 3,
+            spaceBetween: 60,
+        });
+
+    </script>
+</body>
+
+</html>

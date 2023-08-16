@@ -12,6 +12,8 @@
   --container-width: 1320px;
 }
 
+[x-cloak] { display: none !important; }
+
 body {
   font-family: "SUIT Variable", sans-serif;
 }

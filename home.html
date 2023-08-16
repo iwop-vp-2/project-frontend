@@ -12,6 +12,103 @@
     <link rel="stylesheet" href="./css/home.css">
 
     <script src="./js/common.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <script>
+        const schedules = [
+            {
+                name: "2023년 상반기 1차 설명회",
+                date: new Date("2023-02-16T06:10:00.000Z"),
+                place: "선린 인터넷 고등학교 체육관",
+
+                attendLink: "https://exmple.com",
+                attendStart: new Date("2023-01-30T06:10:00.000Z"),
+                attendEnd: new Date("2023-02-09T07:00:00.000Z")
+            },
+            {
+                name: "2023년 상반기 2차 설명회",
+                date: new Date("2023-04-16T06:10:00.000Z"),
+                place: "선린 인터넷 고등학교 체육관",
+
+                attendLink: "https://exmple.com",
+                attendStart: new Date("2023-03-30T06:10:00.000Z"),
+                attendEnd: new Date("2023-04-09T07:00:00.000Z")
+            },
+            {
+                name: "2023년 하반기 1차 설명회",
+                date: new Date("2023-08-16T06:10:00.000Z"),
+                place: "선린 인터넷 고등학교 체육관",
+
+                attendLink: "https://exmple.com",
+                attendStart: new Date("2023-07-30T06:10:00.000Z"),
+                attendEnd: new Date("2023-08-09T07:00:00.000Z")
+            },
+            {
+                name: "2023년 하반기 2차 설명회",
+                date: new Date("2023-10-16T06:10:00.000Z"),
+                place: "선린 인터넷 고등학교 체육관",
+
+                attendLink: "https://exmple.com",
+                attendStart: new Date("2023-09-30T06:10:00.000Z"),
+                attendEnd: new Date("2023-10-09T07:00:00.000Z")
+            }
+        ];
+
+        const weekday = ["일", "월", "화", "수", "목", "금", "토"]
+        const getDateStr = (date) => `${date.getMonth() + 1}월 ${date.getDate()}일(${weekday[date.getDay()]})`
+        const getStatusMsg = (name, date) => `${name}는 ${getDateStr(date)} ${date.getHours()}에 진행됩니다.`
+        const getNoticeMsg = (start, end) => `${getDateStr(start)} ~ ${getDateStr(end)} ${end.getHours()} 까지 아래 링크를 통해 참가 신청합니다.`
+        function secToStr(seconds) {
+            const days = Math.floor(seconds / (24 * 60 * 60));
+            seconds -= days * 24 * 60 * 60;
+
+            const hours = Math.floor(seconds / (60 * 60));
+            seconds -= hours * 60 * 60;
+
+            const minutes = Math.floor(seconds / 60);
+            seconds -= minutes * 60;
+
+            const secondsLeft = seconds;
+
+            return `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')}`;
+        }
+
+        function banner() {
+            return {
+                enable: false,
+                msg: "",
+                msg2: "",
+                init() {
+                    this.update()
+                    setInterval(() => {
+                        this.update()
+                    }, 1000)
+                },
+                update() {
+                    const now = new Date().getTime();
+                    this.enable = false;
+                    for (const schedule of schedules) {
+                        const passed = schedule.attendEnd.getTime() < now
+                        if (passed) continue;
+
+                        const waiting = schedule.attendStart.getTime() > now;
+                        const attending = schedule.attendStart.getTime() <= now && now < schedule.attendEnd.getTime()
+
+                        if (waiting) {
+                            this.msg = schedule.name + " 신청일이 임박했어요!";
+                            this.msg2 = "신청일까지 남은 시간: " + secToStr((schedule.attendStart.getTime() - now) / 1000 | 0);
+                            this.enable = true;
+                        } else if (attending) {
+                            this.msg = schedule.name + " 참가신청을 받고 있어요!";
+                            this.msg2 = "신청마감까지 남은 시간: " + secToStr((schedule.attendEnd.getTime() - now) / 1000 | 0);
+                            this.enable = true;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -29,10 +126,10 @@
         </div>
     </header>
 
-    <div class="banner">
+    <div class="banner" x-data="banner()" x-init="init()" x-show="enable" x-clock>
         <div class="container banner__wrap">
-            <div class="banner__txt">입학설명회 신청일이 임박했어요!</div>
-            <div class="banner__txt">신청일까지 남은 시간 : DD:HH:mm:SS</div>
+            <div class="banner__txt" x-text="msg"></div>
+            <div class="banner__txt" x-text="msg2"></div>
         </div>
     </div>
 
@@ -48,78 +145,23 @@
     <section id="info-session-schedule" class="container info-session-schedule">
         <div class="info-session-schedule__title">입학 설명회 안내</div>
 
-        <div class="info-session-schedule__list">
-            <div class="info-session-schedule-item">
-                <div class="info-session-schedule-item__title">
-                    2023년 상반기 1차 설명회
-                </div>
+        <div class="info-session-schedule__list" x-data="schedules">
+            <template x-for="sc in schedules">
+                <div class="info-session-schedule-item">
+                    <div class="info-session-schedule-item__title" x-text="sc.name"></div>
 
-                <div class="info-session-schedule-item__status">
-                    2023년 상반기 1차 설명회는 6월 16일(금) 16시에 진행됩니다.
-                </div>
+                    <div class="info-session-schedule-item__status" x-text="getStatusMsg(sc.name, sc.date)"></div>
 
-                <div class="info-session-schedule-item__desc-list">
-                    <div class="info-session-schedule-item__desc">장소: 선린 인터넷 고등학교 체육관</div>
-                    <div class="info-session-schedule-item__desc">유의 사항: 5월 30일(화) ~ 6월 9일(금) 16시 까지 아래 링크를 통해 참가 신청합니다.
+                    <div class="info-session-schedule-item__desc-list">
+                        <div class="info-session-schedule-item__desc" x-text="'장소: ' + sc.place"></div>
+                        <div class="info-session-schedule-item__desc"
+                            x-text="'유의사항: '+ getNoticeMsg(sc.attendStart, sc.attendEnd)">
+                        </div>
                     </div>
+
+                    <button class="button">신청 기간이 아닙니다</button>
                 </div>
-
-                <button class="button">신청 기간이 아닙니다</button>
-            </div>
-
-            <div class="info-session-schedule-item">
-                <div class="info-session-schedule-item__title">
-                    2023년 상반기 1차 설명회
-                </div>
-
-                <div class="info-session-schedule-item__status">
-                    2023년 상반기 1차 설명회는 6월 16일(금) 16시에 진행됩니다.
-                </div>
-
-                <div class="info-session-schedule-item__desc-list">
-                    <div class="info-session-schedule-item__desc">장소: 선린 인터넷 고등학교 체육관</div>
-                    <div class="info-session-schedule-item__desc">유의 사항: 5월 30일(화) ~ 6월 9일(금) 16시 까지 아래 링크를 통해 참가 신청합니다.
-                    </div>
-                </div>
-
-                <button class="button">신청 기간이 아닙니다</button>
-            </div>
-
-            <div class="info-session-schedule-item">
-                <div class="info-session-schedule-item__title">
-                    2023년 상반기 1차 설명회
-                </div>
-
-                <div class="info-session-schedule-item__status">
-                    2023년 상반기 1차 설명회는 6월 16일(금) 16시에 진행됩니다.
-                </div>
-
-                <div class="info-session-schedule-item__desc-list">
-                    <div class="info-session-schedule-item__desc">장소: 선린 인터넷 고등학교 체육관</div>
-                    <div class="info-session-schedule-item__desc">유의 사항: 5월 30일(화) ~ 6월 9일(금) 16시 까지 아래 링크를 통해 참가 신청합니다.
-                    </div>
-                </div>
-
-                <button class="button" disabled>신청 기간이 아닙니다</button>
-            </div>
-
-            <div class="info-session-schedule-item">
-                <div class="info-session-schedule-item__title">
-                    2023년 상반기 1차 설명회
-                </div>
-
-                <div class="info-session-schedule-item__status">
-                    2023년 상반기 1차 설명회는 6월 16일(금) 16시에 진행됩니다.
-                </div>
-
-                <div class="info-session-schedule-item__desc-list">
-                    <div class="info-session-schedule-item__desc">장소: 선린 인터넷 고등학교 체육관</div>
-                    <div class="info-session-schedule-item__desc">유의 사항: 5월 30일(화) ~ 6월 9일(금) 16시 까지 아래 링크를 통해 참가 신청합니다.
-                    </div>
-                </div>
-
-                <button class="button">신청 기간이 아닙니다</button>
-            </div>
+            </template>
         </div>
     </section>
 

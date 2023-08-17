@@ -116,12 +116,18 @@
         <!-- slider js -->
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
-                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
-                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
-                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
-                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
-                <div class="swiper-slide"><img class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt=""></div>
+                <div class="swiper-slide"><img onclick="openProjectModal('무언가 대단1', 'ㄴㅁㅁ', '기술', '마법의 힘으로 대단한 무언가를 이루어줍니다.')" class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img onclick="openProjectModal('무언가 대단2', 'ㄴㅁㅁ', '기술', '마법의 힘으로 대단한 무언가를 이루어줍니다.')" class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img onclick="openProjectModal('무언가 대단3', 'ㄴㅁㅁ', '기술', '마법의 힘으로 대단한 무언가를 이루어줍니다.')" class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img onclick="openProjectModal('무언가 대단4', 'ㄴㅁㅁ', '기술', '마법의 힘으로 대단한 무언가를 이루어줍니다.')" class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img onclick="openProjectModal('무언가 대단5', 'ㄴㅁㅁ', '기술', '마법의 힘으로 대단한 무언가를 이루어줍니다.')" class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img onclick="openProjectModal('무언가 대단6', 'ㄴㅁㅁ', '기술', '마법의 힘으로 대단한 무언가를 이루어줍니다.')" class="swiper-slide__img" src="img/placeholder-portrait.jpg" alt="">
+                </div>
             </div>
 
 
@@ -163,6 +169,31 @@
             </div>
         </div>
     </footer>
+
+    <div id="modal" class="project-modal" style="display: none;">
+        <div class="project-modal__container">
+            <img class="project-modal__close" src="img/close.svg" alt="">
+
+            <img class="project-modal__img" src="img/placeholder-portrait.jpg" alt="">
+            <div class="project-modal__info">
+                <div id="modal-title" class="project-modal__title">asd</div>
+                <div class="project-modal__attr">
+                    <span class="project-modal__attr-emph">원작자: </span>
+                    <span id="modal-author"></span>
+                </div>
+                <div class="project-modal__attr">
+                    <span class="project-modal__attr-emph">분야: </span>
+                    <span id="modal-cate"></span>
+                </div>
+                <div class="project-modal__attr">
+                    <span class="project-modal__attr-emph">설명: </span>
+                    <span id="modal-desc"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/modal.js"></script>
 
     <script>
         new Swiper('.swiper', {

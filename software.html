@@ -18,6 +18,7 @@
     <style>
         :root {
             --color-dept: var(--color-dept-software);
+            --color-dept-bg: linear-gradient(57deg, #FFD700 0%, rgba(255, 215, 0, 0.50) 100%);
         }
 
     </style>
@@ -47,7 +48,10 @@
             </div>
             <div>SOFTWARE</div>
         </div>
-        <img class="main-banner__img" src="img/placeholder-landscape.jpg" alt="">
+        <div class="main-banner__content">
+            <div class="main-banner__dept-slog">미래를 창조하는 SW 개발자</div>
+            <div class="main-banner__dept-name">소프트웨어과</div>
+        </div>
     </section>
 
     <section id="introduce" class="container introduce">
@@ -209,6 +213,7 @@
 
             pagination: {
                 el: '.swiper-pagination',
+                clickable: true,
             },
 
             slidesPerView: 3,

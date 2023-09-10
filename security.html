@@ -18,6 +18,7 @@
     <style>
         :root {
             --color-dept: var(--color-dept-security);
+            --color-dept-bg: linear-gradient(57deg, #FF9128 0%, rgba(255, 145, 40, 0.75) 100%);
         }
 
     </style>
@@ -47,7 +48,10 @@
             </div>
             <div>SECURITY</div>
         </div>
-        <img class="main-banner__img" src="img/placeholder-landscape.jpg" alt="">
+        <div class="main-banner__content">
+            <div class="main-banner__dept-slog">정보윤리 의식을 갖춘 정보보호 전문가</div>
+            <div class="main-banner__dept-name">정보 보호과</div>
+        </div>
     </section>
 
     <section id="introduce" class="container introduce">
@@ -207,6 +211,7 @@
 
             pagination: {
                 el: '.swiper-pagination',
+                clickable: true,
             },
 
             slidesPerView: 3,

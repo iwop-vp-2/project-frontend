@@ -236,6 +236,8 @@ footer {
 .project-modal__img {
   width: 400px;
   height: 600px;
+
+  border-radius: 12px;
 }
 
 .project-modal__info {

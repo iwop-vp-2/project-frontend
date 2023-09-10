@@ -109,6 +109,11 @@ html {
   justify-content: space-between;
 }
 
+.sw-edu-institute__left {
+  flex-shrink: 0;
+  width: 490px;
+}
+
 .sw-edu-institute__title {
   color: var(--color-maintext);
   font-size: 48px;
@@ -139,8 +144,11 @@ html {
 }
 
 /* sw-edu-institute-item */
-.sw-edu-institute-item__img {
+.sw-edu-institute-item {
   width: 400px;
+}
+.sw-edu-institute-item__img {
+  width: 100%;
   height: 300px;
   background: #fafafa;
   display: block;
